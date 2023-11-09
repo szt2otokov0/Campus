@@ -1,7 +1,7 @@
 public class Person {
-    private String name;
-    private byte age;
-    private boolean gender;
+    protected String name;
+    protected byte age;
+    protected boolean gender;
 
     public void getGoal(){
         System.out.println("My goal is: live for the moment!");
