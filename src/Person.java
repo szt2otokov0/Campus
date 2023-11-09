@@ -1,6 +1,6 @@
 public class Person {
     protected String name;
-    protected byte age;
+    protected int age;
     protected boolean gender;
 
     public void getGoal(){
@@ -8,10 +8,14 @@ public class Person {
     }
 
     public void introduce(){
-        System.out.println("Hi, I'm " + name + ", a " + age + "year old " + gender + ".");
+        System.out.println("Hi, I'm " + name + ", a " + age + " year old " + getGenderString() + ".");
     }
 
-    public Person(String name, byte age, boolean gender) {
+    protected String getGenderString(){
+        return gender ? "male" : "female";
+    }
+
+    public Person(String name, int age, boolean gender) {
         this.name = name;
         this.age = age;
         this.gender = gender;

@@ -1,32 +1,32 @@
 public class Campus {
     public static void main(String[] args) {
-        Person mark = new Person("Mark",(byte)46,true);
+        Person mark = new Person("Mark",46,true);
         mark.introduce();
-        System.out.print("My goal is: ");
         mark.getGoal();
 
         Person jane = new Person();
         jane.introduce();
-        System.out.print("My goal is: ");
         jane.getGoal();
 
-        Student john = new Student("John Doe",(byte)20,true,"BME");
+        Student john = new Student("John Doe",20,true,"BME");
         john.introduce();
         System.out.print("My goal is: ");
         john.getGoal();
 
         Student janeStudent = new Student();
+        janeStudent.skipDays(3);
         janeStudent.introduce();
         System.out.print("My goal is: ");
-        janeStudent.skipDays(3);
         janeStudent.getGoal();
 
-        Mentor gandhi = new Mentor("Gandhi",(byte)148,false,MentorLevel.SENIOR);
+        Mentor gandhi = new Mentor("Gandhi",148,false,MentorLevel.SENIOR);
         gandhi.introduce();
+        System.out.print("My goal is: ");
         gandhi.getGoal();
 
         Mentor janeMentor = new Mentor();
         janeMentor.introduce();
+        System.out.print("My goal is: ");
         janeMentor.getGoal();
 
         Sponsor janeSponsor = new Sponsor();
@@ -34,9 +34,23 @@ public class Campus {
             janeSponsor.hire();
         }
         janeSponsor.introduce();
+        System.out.print("My goal is: ");
         janeSponsor.getGoal();
 
-        Sponsor elon = new Sponsor("Elon Musk",(byte)46,true,"SpaceX");
-        //todo: finish introductions
+        Sponsor elon = new Sponsor("Elon Musk",46,true,"SpaceX");
+        for(int i = 0;i < 5;i++){
+            elon.hire();
+        }
+        elon.introduce();
+        System.out.print("My goal is: ");
+        elon.getGoal();
+
+        Cohort awesome = new Cohort("AWESOME");
+        awesome.addStudent(john);
+        awesome.addStudent(janeStudent);
+        awesome.addMentor(gandhi);
+        awesome.addMentor(janeMentor);
+        awesome.info();
+
     }
 }

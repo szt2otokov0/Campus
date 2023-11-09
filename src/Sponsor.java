@@ -4,8 +4,8 @@ public class Sponsor extends Person{
 
     @Override
     public void introduce(){
-        System.out.println("Hi, I'm " + name + ", a " + age + "year old " + gender + " who represents" + company +
-                " and hired" + hiredStudents + " students so far.");
+        System.out.println("Hi, I'm " + name + ", a " + age + " year old " + getGenderString() + " who represents " + company +
+                " and hired " + hiredStudents + " students so far.");
     }
 
     public void hire(){
@@ -17,7 +17,7 @@ public class Sponsor extends Person{
         System.out.println("Hire brilliant junior software developers.");
     }
 
-    public Sponsor(String name, byte age, boolean gender, String company) {
+    public Sponsor(String name, int age, boolean gender, String company) {
         super(name, age, gender);
         this.company = company;
         hiredStudents = 0;

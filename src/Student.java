@@ -9,7 +9,7 @@ public class Student extends Person{
 
     @Override
     public void introduce(){
-        System.out.println("Hi, I'm " + name + ", a " + age + "year old " + gender + " from " + previousOrganization +
+        System.out.println("Hi, I'm " + name + ", a " + age + " year old " + getGenderString() + " from " + previousOrganization +
                 " who has skipped " + skippedDays + " days from the course already.");
     }
 
@@ -17,7 +17,7 @@ public class Student extends Person{
         skippedDays += numberOfDays;
     }
 
-    public Student(String name, byte age, boolean gender, String previousOrganization) {
+    public Student(String name, int age, boolean gender, String previousOrganization) {
         super(name, age, gender);
         this.previousOrganization = previousOrganization;
         skippedDays = 0;
